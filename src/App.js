@@ -6,21 +6,21 @@ import requests from "./libs/request";
 import { useEffect } from "react";
 
 function App() {
-  const [movies, setMovies] = useState();
+	const [movies, setMovies] = useState();
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await axios.get(`${requests.fetchTrending}`);
-      console.log(response.data.results);
-    };
-    fetchData();
-  }, []);
+	useEffect(() => {
+		const fetchData = async () => {
+			const response = await axios.get(`${requests.fetchTrending}`);
+			console.log(response.data.results);
+		};
+		fetchData();
+	}, []);
 
-  return (
-    <div className="App">
-      <h1>hello</h1>
-    </div>
-  );
+	return (
+		<div className="App">
+			<h1>hello</h1>
+		</div>
+	);
 }
 
 export default App;
