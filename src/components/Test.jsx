@@ -1,5 +1,6 @@
 import React from "react";
 import Content from ".././components/heading/Content";
+import Banner from "./banner/Banner";
 // import Heading from ".././components/heading/Heading";
 // import Button from ".././components/button/Button";
 // import { IoIosArrowForward } from "react-icons/io";
@@ -60,11 +61,16 @@ const Test = () => {
 		// </>
 
 		// content
+		// <>
+		// 	<Content
+		// 		color="black"
+		// 		content="Watch on smart TVs, PlayStation, Xbox,."
+		// 	/>
+		// </>
+
+		// banner
 		<>
-			<Content
-				color="black"
-				content="Watch on smart TVs, PlayStation, Xbox,."
-			/>
+			<Banner />
 		</>
 	);
 };
