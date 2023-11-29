@@ -1,0 +1,14 @@
+.bold {
+	font-weight: 900;
+	font-size: xxx-large;
+}
+.white {
+	color: #ffffff;
+}
+.black {
+	color: #000;
+}
+.medium-with-bold {
+	font-size: larger;
+	font-weight: 400;
+}

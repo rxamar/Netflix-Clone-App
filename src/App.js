@@ -1,24 +1,9 @@
-import logo from "./logo.svg";
-import "./App.css";
-import { useState } from "react";
-import axios from "./libs/axios";
-import requests from "./libs/request";
-import { useEffect } from "react";
+import Test from "./components/Test";
 
 function App() {
-	const [movies, setMovies] = useState();
-
-	useEffect(() => {
-		const fetchData = async () => {
-			const response = await axios.get(`${requests.fetchTrending}`);
-			console.log(response.data.results);
-		};
-		fetchData();
-	}, []);
-
 	return (
 		<div className="App">
-			<h1>hello</h1>
+			<Test />
 		</div>
 	);
 }

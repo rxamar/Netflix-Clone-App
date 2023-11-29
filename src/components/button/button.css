@@ -1,0 +1,67 @@
+.bg-1 {
+	background-color: #e50914;
+}
+.bg-white {
+	background-color: #ffffff;
+}
+
+button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 7px;
+	cursor: pointer;
+}
+.bg-2 {
+	background-color: #c11119;
+}
+
+.rightarrow {
+	margin-top: 5px;
+}
+
+.white {
+	color: white;
+}
+.black {
+	color: black;
+}
+
+.rounded {
+	border-radius: 4px;
+	border: none;
+}
+
+.small {
+	height: 27px;
+	width: 60px;
+}
+
+.bg-trans {
+	background: rgba(112, 128, 144, 0.642);
+	border: 1px solid black;
+}
+
+.small-play {
+	width: 100px;
+	border: none;
+	padding: 10px 10px;
+}
+.medium {
+	height: 32px;
+	width: 60px;
+	padding: 5px;
+}
+.large {
+	height: 40px;
+	width: 120px;
+	padding: 2px;
+	font-size: medium;
+}
+
+.x-large {
+	height: 40px;
+	width: 280px;
+	padding: 2px;
+	font-size: medium;
+}
