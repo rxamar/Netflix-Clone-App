@@ -1,6 +1,7 @@
 .bold {
 	font-weight: 900;
-	font-size: xxx-large;
+	font-size: xx-large;
+	margin: 0px;
 }
 .white {
 	color: #ffffff;
@@ -11,4 +12,19 @@
 .medium-with-bold {
 	font-size: larger;
 	font-weight: 400;
+}
+
+.bottom {
+	display: flex;
+	align-items: flex-end;
+	width: 100%;
+	text-align: left;
+}
+
+@media screen and (max-width: 1024px) {
+	.bottom {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 }

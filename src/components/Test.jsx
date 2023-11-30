@@ -1,10 +1,13 @@
 import React from "react";
-import Content from ".././components/heading/Content";
-import Banner from "./banner/Banner";
+// import Content from ".././components/heading/Content";
+// import Banner from "./banner/Banner";
 // import Heading from ".././components/heading/Heading";
 // import Button from ".././components/button/Button";
 // import { IoIosArrowForward } from "react-icons/io";
 // import { FaPlay } from "react-icons/fa";
+// import BanImg from "../assets/images/ban-tv.png";
+// import VideoOne from "../assets/videos/video-1.m4v";
+import LandingPage from "../pages/public/landingPage/LandingPage";
 
 const Test = () => {
 	return (
@@ -69,9 +72,24 @@ const Test = () => {
 		// </>
 
 		// banner
-		<>
-			<Banner />
-		</>
+		// <>
+		// 	<Banner video={VideoOne} img={BanImg}>
+		// 		<Heading
+		// 			align="bottom"
+		// 			className="heading"
+		// 			color="white"
+		// 			size="bold"
+		// 			title="Enjoy on your TV"
+		// 		/>
+		// 		<Content
+		// 			className="content"
+		// 			color="white"
+		// 			content="Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more."
+		// 		/>
+		// 	</Banner>
+		// </>
+
+		<LandingPage />
 	);
 };
 
