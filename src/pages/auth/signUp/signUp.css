@@ -1,0 +1,17 @@
+.signUp-container{
+    height: 100vh;
+    display: flex;
+    justify-content:center;
+    align-items: center; 
+}
+.signUp-box{
+    height: 390px;
+    width: 330px;
+    background-color:rgba(0,0,0,0.8);
+    border-radius: 8px;
+    padding: 50px 60px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

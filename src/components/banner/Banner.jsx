@@ -1,21 +1,24 @@
 import React from "react";
 import "./banner.css";
-import Content from "../heading/Content";
-import Heading from "../heading/Heading";
-import BanImg from "../../assets/images/ban-tv.png";
 
-const Banner = () => {
+const Banner = ({ children, img, video, vidSize }) => {
 	return (
 		<div className="single-banner">
-			<div className="content-section">
-				<Heading color="white" size="bold" title="Enjoy on your TV" />
-				<Content
-					color="white"
-					content="Watch on smart TVs, PlayStation, Xbox,."
-				/>
-			</div>
+			<div className="content-section">{children}</div>
 			<div className="image-section">
-				<img src={BanImg} alt="banner img" />
+				<img src={img} alt="banner img" className="banner-image" />
+				{video && (
+					<div className="video-section">
+						<video
+							className={vidSize}
+							src={video}
+							alt="video-1"
+							muted
+							autoPlay
+							loop
+						/>
+					</div>
+				)}
 			</div>
 		</div>
 	);
