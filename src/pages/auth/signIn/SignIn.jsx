@@ -1,9 +1,18 @@
-import React from "react";
-import Input from "../input/Input";
-import Button from "../button/Button";
-import "./form.css";
-const Form = ({ values, isSignUp, onSubmit, onChange }) => {
-  const { email, password } = values;
+import React, { useState } from "react";
+import "./signIn.css";
+import Button from "../../../components/button/Button";
+import Input from "../../../components/input/Input";
+
+const SignIn = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  // const handleSignIn = () => {
+  //   // Implement sign-in logic here
+  //   console.log("Email:", email);
+  //   console.log("Password:", password);
+  // };
+
   return (
     <div className="signin-container">
       <div className="signin-box">
@@ -13,13 +22,13 @@ const Form = ({ values, isSignUp, onSubmit, onChange }) => {
             type="email"
             placeholder="Email address"
             value={email}
-            onchange={onChange}
+            onchange={(e) => setEmail(e.target.value)}
           />
           <Input
             type="password"
             placeholder="Password"
             value={password}
-            onchange={onChange}
+            onchange={(e) => setPassword(e.target.value)}
           />
 
           <div className="button-align">
@@ -39,30 +48,19 @@ const Form = ({ values, isSignUp, onSubmit, onChange }) => {
           </div>
           <a href="/">Need help?</a>
         </div>
-        {isSignUp ? (
-          <>
-            <div className="new">
-              <p>Already subscribed to netflix?</p>
-              <a href="/">Sign in</a>
-            </div>
-          </>
-        ) : (
-          <>
-            <div className="new">
-              <p>New to Netflix?</p>
-              <a href="/">Sign up now</a>
-            </div>
-            <div className="para">
-              <p>
-                This page is protected by Google reCAPTCHA to ensure you're not
-                a bot.
-              </p>
-            </div>
-          </>
-        )}
+        <div className="new">
+          <p>New to Netflix?</p>
+          <a href="/">Sign up now</a>
+        </div>
+        <div className="para">
+          <p>
+            This page is protected by Google reCAPTCHA to ensure you're not a
+            bot.
+          </p>
+        </div>
       </div>
     </div>
   );
 };
 
-export default Form;
+export default SignIn;
