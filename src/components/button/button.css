@@ -61,7 +61,7 @@ button {
 
 .x-large {
 	height: 40px;
-	width: 280px;
+	width: 100%;
 	padding: 2px;
 	font-size: medium;
 }
