@@ -92,7 +92,7 @@ export const getFetchWarMovies = async () => {
     return null;
   }
 };
-const getFetchScienceFictionMovies = async () => {
+export const getFetchScienceFictionMovies = async () => {
   try {
     const { data } = await axios.get(requests.fetchScienceFictionMovies);
 
@@ -121,4 +121,29 @@ export const getSearchUrl = async () => {
     alert(JSON.stringify(error));
     return null;
   }
+};
+
+export const getPageData = async () => {
+  const netflixOriginals = await getFetchNetflixOriginals();
+  const trendingNow = await getFetchTrending();
+  const topRated = await getFetchTopRated();
+  const actionMovies = await getFetchActionMovies();
+  const comedyMoives = await getFetchComedyMovies();
+  const horrorMovies = await getFetchHorrorMovies();
+  const romanceMovies = await getFetchRomanceMovies();
+  const warMovies = await getFetchWarMovies();
+  const scienceFictionMovies = await getFetchScienceFictionMovies();
+  const documentaries = await getFetchDocumentaries();
+  return {
+    netflixOriginals,
+    trendingNow,
+    topRated,
+    actionMovies,
+    comedyMoives,
+    horrorMovies,
+    romanceMovies,
+    warMovies,
+    scienceFictionMovies,
+    documentaries,
+  };
 };
