@@ -1,5 +1,38 @@
-*{
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
+* {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+.bg-trans {
+	background: transparent;
+	background-color: rgba(13, 12, 12, 0.7);
+	border: 1px solid rgb(142, 130, 130);
+	border-radius: 3px;
+	color: white;
+	width: 100%;
+	padding: 14px 100px 14px 0px;
+	font-size: large;
+}
+
+input {
+	padding: 17px;
+}
+
+.parent > label {
+	position: absolute;
+	left: 15px;
+	top: 15px;
+	font-size: large;
+	color: rgb(143, 151, 158);
+	transition: 0.2s;
+}
+.parent {
+	position: relative;
+}
+
+input:focus + label,
+input:not(:placeholder-shown) + label {
+	top: 3px;
+	font-size: small;
 }

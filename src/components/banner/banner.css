@@ -4,7 +4,7 @@
 	max-height: 400px;
 	overflow: hidden;
 	background-color: black;
-	padding: 16px 82px 54px 10px;
+	/* padding: 16px 82px 54px 10px; */
 	border-bottom: 4px solid rgba(128, 128, 128, 0.324);
 	border-top: 3px solid rgba(128, 128, 128, 0.324);
 }
@@ -17,7 +17,7 @@
 	height: 500px;
 	overflow: hidden;
 	position: relative;
-	margin-right: 150px;
+	/* margin-right: 150px; */
 }
 
 .video-section {
@@ -68,7 +68,6 @@
 	color: white;
 	text-align: left;
 	/* padding: 3% 0%; */
-
 	padding-left: 10%;
 }
 
@@ -79,10 +78,10 @@
 	padding-left: 10%;
 }
 
-/* @media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
 	.single-banner {
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
 	}
 
 	.image-section {
@@ -97,73 +96,81 @@
 	}
 
 	.small-video {
-		width: 70%;
-		left: 15%;
+		width: 95%;
+		left: 2%;
 	}
 
 	.large-video {
-		width: 100%;
-		left: 0;
+		width: 84%;
+		left: 29px;
 	}
-} */
+}
 
 @media only screen and (max-width: 768px) {
 	.single-banner {
+		width: 100%;
+		padding: 30px 0px 0px 0px;
 		flex-direction: column;
 	}
 
 	.image-section {
-		width: 100%;
-		max-width: 100%;
-		margin-right: 0;
+		width: 78%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
-	.video-section {
-		padding: 10px;
+	.banner-image {
+		width: 70%;
+		height: 100%;
+		padding: 20px 10px;
 	}
 
-	.video-section video {
-		width: 100%;
+	.small-video {
+		width: 60%;
+		position: relative;
+		top: 10px;
+		left: 185px;
 	}
 
-	.small-video,
 	.large-video {
+		width: 54%;
+		position: relative;
+		top: -20px;
+		left: 198px;
+	}
+}
+
+@media only screen and (max-width: 426px) {
+	.single-banner {
 		width: 100%;
-		left: 0;
-	}
-
-	.content-section {
-		padding-left: 10px;
-	}
-}
-
-/* Media query for mobile devices (up to 480px width) */
-@media only screen and (max-width: 480px) {
-	.single-banner {
-		padding: 10px;
-	}
-
-	.content-section {
-		padding: 10px;
-	}
-
-	.heading,
-	.content {
-		padding: 10px;
-	}
-}
-
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-	.single-banner {
-		flex-direction: row;
-		padding: 0px 0px 6px 139px;
+		flex-direction: column;
 	}
 
 	.image-section {
-		width: 50%;
+		width: 90%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
-	.content-section {
-		padding-left: 10px;
+	.banner-image {
+		width: 85%;
+		height: 100%;
+		padding: 20px 10px;
+	}
+
+	.small-video {
+		width: 100%;
+		position: relative;
+		top: 7px;
+		left: 44px;
+	}
+
+	.large-video {
+		width: 77%;
+		position: relative;
+		top: -16px;
+		left: 53px;
 	}
 }

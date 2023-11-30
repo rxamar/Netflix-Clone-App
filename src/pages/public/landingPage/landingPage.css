@@ -26,4 +26,13 @@
 
 .content-box {
 	display: flex;
+	gap: 10px;
+	padding-bottom: 40px;
+}
+
+@media screen and (max-width: 576px) {
+	.content-box {
+		flex-direction: column;
+		padding-bottom: 90px;
+	}
 }

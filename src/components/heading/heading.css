@@ -1,6 +1,6 @@
 .bold {
-	font-weight: 900;
-	font-size: xx-large;
+	font-weight: 800;
+	font-size: xxx-large;
 	margin: 0px;
 }
 .white {
@@ -21,10 +21,25 @@
 	text-align: left;
 }
 
-@media screen and (max-width: 1024px) {
-	.bottom {
-		display: flex;
-		justify-content: center;
-		align-items: center;
+@media screen and (max-width: 767px) {
+	.bold {
+		padding: 0px 40px;
+	}
+	.medium-with-bold {
+		padding: 2px 30px;
+		font-size: small;
+		font-weight: 400;
+	}
+}
+
+@media screen and (max-width: 426px) {
+	.bold {
+		font-size: x-large;
+	}
+	.medium-with-bold {
+		padding-top: 10px;
+		padding-right: 20px;
+		font-size: small;
+		font-weight: 400;
 	}
 }

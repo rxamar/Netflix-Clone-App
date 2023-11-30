@@ -33,8 +33,7 @@ button {
 }
 
 .small {
-	height: 27px;
-	width: 60px;
+	padding: 10px;
 }
 
 .bg-trans {
@@ -53,10 +52,8 @@ button {
 	padding: 5px;
 }
 .large {
-	height: 40px;
-	width: 120px;
-	padding: 2px;
-	font-size: medium;
+	padding: 10px 20px;
+	font-size: large;
 }
 
 .x-large {

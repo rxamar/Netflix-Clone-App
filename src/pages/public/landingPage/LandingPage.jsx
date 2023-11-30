@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./landingPage.css";
 import { IoIosArrowForward } from "react-icons/io";
 import Banner from "../../../components/banner/Banner";
@@ -15,11 +15,26 @@ import ImgFour from "../../../assets/images/banner-4.png";
 import VideoOne from "../../../assets/videos/video-1.m4v";
 import VideoTwo from "../../../assets/videos/video-2.m4v";
 import Button from "../../../components/button/Button";
+import Input from "../../../components/input/Input";
+import Navbar from "../../../components/navbar/Navbar";
+const initialState = {
+	email: "",
+};
 
 const LandingPage = () => {
+	const [email, setEmail] = useState(initialState);
+
+	const handleChange = (event) => {
+		const { name, value } = event.target;
+		console.log({ name, value });
+		setEmail({ ...email, [name]: value });
+	};
+
+	console.log(email);
 	return (
 		<>
 			<div className="main-banner">
+				<Navbar />
 				<div className="main-title">
 					<Heading
 						size="bold"
@@ -33,6 +48,11 @@ const LandingPage = () => {
 					/>
 
 					<div className="content-box">
+						<Input
+							bg="bg-trans"
+							label="Email Address"
+							onchange={handleChange}
+						/>
 						<Button
 							size="large"
 							rounded="rounded"
