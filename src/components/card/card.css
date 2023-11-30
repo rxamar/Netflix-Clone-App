@@ -35,7 +35,7 @@
 	visibility: hidden;
 	margin-top: -3px;
 	height: 100%;
-	width: 135%;
+	width: 115%;
 	background-color: #141414;
 	color: white;
 	border-bottom-right-radius: 5px;
@@ -69,20 +69,20 @@
 	transition: 0.5s;
 	position: absolute;
 	z-index: 10;
-	left: -30px;
-	right: 30px;
+	left: -15px;
+	right: 10px;
 }
 
 .card-img:hover > img {
 	height: 140%;
-	width: 135%;
+	width: 115%;
 	border-bottom-left-radius: 0px;
 	border-bottom-right-radius: 0px;
 	position: relative;
 	z-index: 1;
 	bottom: -2px;
-	left: -30px;
-	right: 30px;
+	left: -15px;
+	right: 10px;
 }
 
 .test:hover {
