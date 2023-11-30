@@ -1,0 +1,25 @@
+.navbar {
+	background: transparent;
+	display: flex;
+	padding: 10px 30px;
+	justify-content: space-between;
+}
+
+.logo-img img {
+	height: 80px;
+	width: 160px;
+}
+
+.landing-topright {
+	margin: 20px;
+	padding: 10px;
+	display: flex;
+	gap: 20px;
+}
+
+select {
+	padding: 8px;
+	background-color: black;
+	color: white;
+	border-radius: 5px;
+}
