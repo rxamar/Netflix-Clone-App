@@ -7,21 +7,20 @@ import SearchPage from "../pages/portal/search/Page";
 import LandingPage from "../pages/public/landingPage/LandingPage";
 // import { getFetchTrending } from "../api/movies";
 const AppRouter = () => {
-	// getFetchTrending();
-	return (
-		<BrowserRouter>
-			<Routes>
-				<Route path="/" element={<LandingPage />} />
-				<Route path="/signin" element={<SigninPage />} />
-				<Route path="/signup" element={<SignupPage />} />
-				<Route path="/card" element={<Card />} />
-				<Route path="/home" element={<HomePage />} />
-				<Route path="/search" element={<SearchPage />} />
-				<Route path="/signup" element={<SignupPage />} />
-				<Route />
-			</Routes>
-		</BrowserRouter>
-	);
+  // getFetchTrending();
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/signin" element={<SigninPage />} />
+        <Route path="/signup" element={<SignupPage />} />
+        <Route path="/card" element={<Card />} />
+        <Route path="/home" element={<HomePage />} />
+        <Route path="/search" element={<SearchPage />} />
+        <Route />
+      </Routes>
+    </BrowserRouter>
+  );
 };
 
 export default AppRouter;
