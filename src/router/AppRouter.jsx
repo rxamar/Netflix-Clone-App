@@ -3,6 +3,7 @@ import Card from "../components/card/Card";
 import SigninPage from "../pages/auth/signIn/SignIn";
 import SignupPage from "../pages/auth/signUp/SignUp";
 import HomePage from "../pages/portal/home/page";
+import SearchPage from "../pages/portal/search/Page";
 import LandingPage from "../pages/public/landingPage/LandingPage";
 // import { getFetchTrending } from "../api/movies";
 const AppRouter = () => {
@@ -15,6 +16,7 @@ const AppRouter = () => {
 				<Route path="/signup" element={<SignupPage />} />
 				<Route path="/card" element={<Card />} />
 				<Route path="/home" element={<HomePage />} />
+				<Route path="/search" element={<SearchPage />} />
 				<Route path="/signup" element={<SignupPage />} />
 				<Route />
 			</Routes>

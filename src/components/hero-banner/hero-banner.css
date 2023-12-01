@@ -1,0 +1,15 @@
+.hero-banner {
+	background-color: black;
+	color: white;
+	position: relative;
+}
+
+.hero-img {
+	height: 92vh;
+	width: 100vw;
+}
+
+.hero-img > img {
+	height: 100%;
+	width: 100%;
+}

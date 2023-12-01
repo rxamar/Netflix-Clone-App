@@ -1,14 +1,15 @@
 import React from "react";
+import "./row.css";
 import Card from "../card/Card";
 
 const List = ({ data }) => {
 	return (
 		<ul
-			className=""
-			style={{
-				display: "grid",
-				gridTemplateColumns: "repeat(5,1fr)",
-			}}
+			className="rows"
+			// style={{
+			// 	display: "grid",
+			// 	gridTemplateColumns: "repeat(5,1fr)",
+			// }}
 		>
 			{data?.map((item) => (
 				<Card movie={item} />

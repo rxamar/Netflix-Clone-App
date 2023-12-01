@@ -138,7 +138,7 @@ const Card = ({ movie }) => {
 		<div className="single-card">
 			<div className="card-img">
 				<img
-					src={`${baseUrl}${movie.poster_path}`}
+					src={`${baseUrl}${movie.backdrop_path}`}
 					alt="single movie card"
 					className="test"
 				/>
@@ -147,7 +147,6 @@ const Card = ({ movie }) => {
 						<FaPlayCircle className="play-icon" />
 						<FaRegHeart className="heart-icon" />
 					</div>
-					console.log(movie);
 					<h3 className="movie-title">{movie.title || movie.name}</h3>
 				</div>
 			</div>
