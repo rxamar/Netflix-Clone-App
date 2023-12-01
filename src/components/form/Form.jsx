@@ -2,6 +2,7 @@ import React from "react";
 import Input from "../input/Input";
 import Button from "../button/Button";
 import "./form.css";
+import { Link } from "react-router-dom";
 const Form = ({ values, isSignUp, onSubmit, onChange }) => {
   const { email, password } = values;
   return (
@@ -43,7 +44,7 @@ const Form = ({ values, isSignUp, onSubmit, onChange }) => {
           <>
             <div className="new">
               <p>Already subscribed to netflix?</p>
-              <a href="/">Sign in</a>
+              <Link to="/signin">Sign in</Link>
             </div>
           </>
         ) : (
