@@ -133,9 +133,9 @@ import { FaRegHeart } from "react-icons/fa";
 
 import React from "react";
 const baseUrl = "https://image.tmdb.org/t/p/w500";
-const Card = ({ movie }) => {
+const Card = ({ movie, style }) => {
 	return (
-		<div className="single-card">
+		<div className={`single-card  ${style || ""} `}>
 			<div className="card-img">
 				<img
 					src={`${baseUrl}${movie.backdrop_path}`}

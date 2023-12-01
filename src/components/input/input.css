@@ -14,6 +14,17 @@
 	padding: 14px 100px 14px 0px;
 	font-size: large;
 }
+.search {
+	background: transparent;
+	background-color: rgba(13, 12, 12, 0.7);
+	border: 1px solid rgb(142, 130, 130);
+	border-radius: 3px;
+	color: white;
+	width: 20vw;
+	height: 3vw;
+	padding: 4px 5px 4px 3px;
+	font-size: small;
+}
 
 input {
 	padding: 17px;
