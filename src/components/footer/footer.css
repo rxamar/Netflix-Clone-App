@@ -1,0 +1,40 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.footer{
+    height: 70vh;
+    width: 100%;
+     padding: 70px;
+     /* padding-bottom: 60px; */
+}
+.footer-content{
+display: grid;
+grid-template-columns: repeat(3,1fr);
+gap: 0.5rem;
+padding: 10px;
+font-weight:400;
+font-size: 11px;
+}
+.para{
+    color: #fff;
+    margin-bottom: 40px;
+}
+.selection{
+    padding: 10px;
+}
+h1{
+    color: #918f8f;
+}
+.py{
+    margin-top: 30px;
+    color: #918f8f;
+    /* font-size: small; */
+}
+@media screen and (min-width: 960px) {
+  .footer{ 
+    margin-top: -4rem;
+    padding: 0 5rem;
+}
+}
