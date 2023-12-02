@@ -35,4 +35,8 @@
 		flex-direction: column;
 		padding-bottom: 90px;
 	}
+
+	.main-title {
+		gap: 7px;
+	}
 }

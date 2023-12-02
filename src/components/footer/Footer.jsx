@@ -32,8 +32,12 @@ const Footer = () => {
           ))}
         </div>
         <div className="selection">
-          <div>
-            <h1>RxAmar</h1>
+          <div className="language-select">
+            <select name="language" id="language">
+              <option value="english">English</option>
+              <option value="hindi">हिंदी</option>
+              <option value="tamil">தமிழ்</option>
+            </select>
           </div>
           <p className="py">Netflix India</p>
         </div>

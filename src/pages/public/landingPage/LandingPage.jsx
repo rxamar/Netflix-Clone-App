@@ -17,18 +17,9 @@ import VideoTwo from "../../../assets/videos/video-2.m4v";
 import Button from "../../../components/button/Button";
 import Input from "../../../components/input/Input";
 import Navbar from "../../../components/navbar/Navbar";
-const initialState = {
-  email: "",
-};
 
 const LandingPage = () => {
-  const [email, setEmail] = useState(initialState);
-
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    console.log({ name, value });
-    setEmail({ ...email, [name]: value });
-  };
+  const [email, setEmail] = useState("");
 
   console.log(email);
   return (
@@ -49,9 +40,10 @@ const LandingPage = () => {
 
           <div className="content-box">
             <Input
-              bg="bg-trans"
+              bg="bg-transparent"
               label="Email Address"
-              onchange={handleChange}
+              value={email}
+              onchange={(event) => setEmail(event.target.value)}
             />
             <Button
               size="large"

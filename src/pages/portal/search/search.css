@@ -15,7 +15,8 @@
 	top: 150px;
 }
 
-.result-padding {
+.result-padding,
+.wishlist-items {
 	padding: 40px 50px;
 }
 

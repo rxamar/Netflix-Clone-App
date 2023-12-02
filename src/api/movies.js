@@ -147,3 +147,40 @@ export const getPageData = async () => {
 		documentaries,
 	};
 };
+
+export const addToWishlist = async (media_id) => {
+	const options = {
+		method: "POST",
+		headers: {
+			accept: "application/json",
+			"content-type": "application/json",
+			Authorization: `Bearer ${process.env.REACT_APP_TOKEN}`,
+		},
+	};
+
+	const { data } = await axios.post(
+		`account/${process.env.REACT_APP_ACCOUNT_ID}/favorite`,
+		{
+			media_type: "movie",
+			media_id,
+			favorite: true,
+		},
+		options
+	);
+	console.log(data);
+	return data;
+};
+
+export const getWishlist = async () => {
+	const options = {
+		headers: {
+			accept: "application/json",
+			Authorization: `Bearer ${process.env.REACT_APP_TOKEN}`,
+		},
+	};
+	const response = await axios.get(
+		`account/${process.env.REACT_APP_ACCOUNT_ID}/favorite/movies?language=en-US&page=1&sort_by=created_at.asc`,
+		options
+	);
+	return response.data;
+};
