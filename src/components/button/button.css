@@ -37,14 +37,16 @@ button {
 }
 
 .bg-trans {
-	background: rgba(112, 128, 144, 0.642);
-	border: 1px solid black;
+	background: transparent;
+	border: 1px solid rgb(255, 255, 255) !important;
+	font-size: medium;
 }
 
 .small-play {
-	width: 100px;
 	border: none;
-	padding: 10px 10px;
+	padding: 7px 30px;
+	margin-top: 20px;
+	font-size: medium;
 }
 .medium {
 	height: 32px;

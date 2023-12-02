@@ -7,7 +7,7 @@ import "./mylist.css";
 const WishList = () => {
 	const [movies, setMovies] = useState([]);
 	useEffect(() => {
-		getWishlist().then((data) => setMovies(data.results));
+		getWishlist().then((data) => setMovies(data?.results));
 	}, []);
 	const movieId = movies?.map((item) => item.id);
 	// console.log(movieId);
