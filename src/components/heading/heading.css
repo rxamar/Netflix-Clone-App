@@ -2,6 +2,7 @@
 	font-weight: 800;
 	font-size: xxx-large;
 	margin: 0px;
+	padding: 3% 6%;
 }
 .white {
 	color: #ffffff;
@@ -24,6 +25,7 @@
 @media screen and (max-width: 767px) {
 	.bold {
 		padding: 0px 40px;
+		font-size: xx-large;
 	}
 	.medium-with-bold {
 		padding: 2px 30px;
@@ -38,6 +40,19 @@
 	}
 	.medium-with-bold {
 		padding-top: 10px;
+		padding-right: 20px;
+		font-size: small;
+		font-weight: 400;
+	}
+}
+
+@media screen and (max-width: 321px) {
+	.bold {
+		margin-top: 15%;
+		font-size: larger;
+	}
+	.medium-with-bold {
+		padding-top: 0px;
 		padding-right: 20px;
 		font-size: small;
 		font-weight: 400;
