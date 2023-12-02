@@ -22,6 +22,10 @@
 	text-align: left;
 }
 
+.hero-text {
+	padding-right: 30%;
+	padding-top: 20px;
+}
 @media screen and (max-width: 767px) {
 	.bold {
 		padding: 0px 40px;

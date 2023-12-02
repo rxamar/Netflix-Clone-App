@@ -8,7 +8,7 @@ import Button from "../../../components/button/Button";
 import Card from "../../../components/card/Card";
 
 import { getPageData } from "../../../api/movies";
-import Row from "../../../components/row/Row";
+// import Row from "../../../components/row/Row";
 import List from "../../../components/row/List";
 const Page = () => {
 	const [data, setData] = useState(null); // to fetch trending Movies

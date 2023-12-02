@@ -167,7 +167,6 @@ export const addToWishlist = async (media_id) => {
 		},
 		options
 	);
-	console.log(data);
 	return data;
 };
 
