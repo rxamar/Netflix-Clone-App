@@ -9,18 +9,6 @@ import Content from "../heading/Content";
 import { getPageData } from "../../api/movies";
 
 const HeroBanner = () => {
-<<<<<<< HEAD
-  return (
-    <>
-      <main className="hero-banner">
-        <Navbar isUser />
-        <div className="hero-img">
-          <img src={HeroImg} alt="hero banner img" />
-        </div>
-      </main>
-    </>
-  );
-=======
 	const baseUrl = "https://image.tmdb.org/t/p/original";
 	const [movie, setMovie] = useState(null);
 	useEffect(() => {
@@ -85,7 +73,6 @@ const HeroBanner = () => {
 			</main>
 		</>
 	);
->>>>>>> e46ecc21cc90046594d806f58d294d1940a468d8
 };
 
 export default HeroBanner;
