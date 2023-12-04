@@ -34,9 +34,30 @@ select {
     margin-top: 30px;
     color: #918f8f;
 }
-/* @media screen and (min-width: 960px) {
-  .footer{ 
-    margin-top: -4rem;
-    padding: 0 5rem;
+
+@media only screen and (max-width: 600px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
 }
-} */
+
+/* Tablet */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Laptop */
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+    .footer-content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1441px) {
+    .footer-content {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
