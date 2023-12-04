@@ -2,18 +2,33 @@ import React, { useState } from "react";
 import Input from "../input/Input";
 import Button from "../button/Button";
 import "./form.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { login } from "../../api/movies";
 const Form = ({ isSignUp }) => {
+	const navigate = useNavigate();
 	const initialState = {
 		username: "",
 		password: "",
 	};
 	const [user, setUser] = useState(initialState);
 
-	const handleSubmit = (event) => {
+	// const payload = {
+	// 	username: "sudharsan31",
+	// 	password: "#5ANbJ6df#Ci2Zz",
+	// };
+
+	const handleSubmit = async (event) => {
 		event.preventDefault();
 		// Perform form submission logic here
 		console.log("Form submitted:", user);
+		login(user);
+		const response = await login(user);
+		console.log({ response });
+		if (response) {
+			navigate("/home");
+		} else {
+			alert("invalis email and password");
+		}
 	};
 
 	const handleChange = (event) => {
