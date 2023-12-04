@@ -6,22 +6,22 @@
 .footer{
     height: 70vh;
     width: 100%;
-     padding: 50px 160px;
+     padding: 20px 23px;
 }
 .footer-content{
 display: grid;
-grid-template-columns: repeat(3,1fr);
+grid-template-columns: repeat(1,1fr);
 gap: 0.8rem;
-padding: 10px;
 font-weight:400;
 font-size: 13px;
 }
 .para{
+    display: flex;
     color: #fff;
     margin-bottom: 40px;
 }
 .selection{
-    padding: 10px;
+    padding: 8px;
 } 
 
 select {
@@ -35,14 +35,12 @@ select {
     color: #918f8f;
 }
 
-@media only screen and (max-width: 600px) {
-    .footer-content {
-        grid-template-columns: 1fr;
-    }
-}
 
 /* Tablet */
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
+   .footer{
+    padding: 50px 160px;
+   }
     .footer-content {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -50,6 +48,9 @@ select {
 
 /* Laptop */
 @media only screen and (min-width: 1025px) and (max-width: 1440px) {
+    .footer{
+        padding: 50px 140px;
+       }
     .footer-content {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -57,6 +58,9 @@ select {
 
 /* Desktop */
 @media only screen and (min-width: 1441px) {
+    .footer{
+        padding: 50px 160px;
+       }
     .footer-content {
         grid-template-columns: repeat(4, 1fr);
     }
