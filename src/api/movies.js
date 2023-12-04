@@ -1,3 +1,4 @@
+import { Navigate } from "react-router-dom";
 import axios from "../libs/axios";
 import requests from "../libs/request";
 export const getFetchTrending = async () => {
@@ -182,4 +183,35 @@ export const getWishlist = async () => {
 		options
 	);
 	return response.data;
+};
+
+// login
+
+const getOptions = {
+	headers: {
+		accept: "application/json",
+		Authorization: `Bearer ${process.env.REACT_APP_TOKEN}`,
+	},
+};
+export const login = async (body) => {
+	try {
+		const { data } = await axios.get("authentication/token/new", getOptions);
+		const { request_token } = data;
+		const { data: response } = await axios.post(
+			"authentication/token/validate_with_login",
+			{ ...body, request_token },
+			getOptions
+		);
+		// console.log(response?.success);
+		if (response?.success) {
+			localStorage.setItem("user", true);
+		}
+		return response?.success ?? false;
+	} catch (error) {
+		console.log({ error: error.message });
+	}
+};
+
+export const logout = () => {
+	localStorage.removeItem("user");
 };

@@ -5,18 +5,64 @@ import HomePage from "../pages/portal/home/page";
 import SearchPage from "../pages/portal/search/Page";
 import MyListPage from "../pages/portal/myList/Page";
 import LandingPage from "../pages/public/landingPage/LandingPage";
+import {
+	ProtectedRoute,
+	ProtectedRouteForUnAuthorizedPage,
+} from "./ProtectedRoute";
 // import { getFetchTrending } from "../api/movies";
 const AppRouter = () => {
 	// getFetchTrending();
 	return (
 		<BrowserRouter>
 			<Routes>
-				<Route path="/" element={<LandingPage />} />
-				<Route path="/signin" element={<SigninPage />} />
-				<Route path="/signup" element={<SignupPage />} />
-				<Route path="/home" element={<HomePage />} />
-				<Route path="/mylist" element={<MyListPage />} />
-				<Route path="/search" element={<SearchPage />} />
+				<Route
+					path="/"
+					element={
+						<ProtectedRouteForUnAuthorizedPage>
+							<LandingPage />
+						</ProtectedRouteForUnAuthorizedPage>
+					}
+				/>
+				<Route
+					path="/signin"
+					element={
+						<ProtectedRouteForUnAuthorizedPage>
+							<SigninPage />
+						</ProtectedRouteForUnAuthorizedPage>
+					}
+				/>
+				<Route
+					path="/signup"
+					element={
+						<ProtectedRouteForUnAuthorizedPage>
+							<SignupPage />
+						</ProtectedRouteForUnAuthorizedPage>
+					}
+				/>
+				<Route
+					path="/home"
+					element={
+						<ProtectedRoute>
+							<HomePage />
+						</ProtectedRoute>
+					}
+				/>
+				<Route
+					path="/mylist"
+					element={
+						<ProtectedRoute>
+							<MyListPage />
+						</ProtectedRoute>
+					}
+				/>
+				<Route
+					path="/search"
+					element={
+						<ProtectedRoute>
+							<SearchPage />
+						</ProtectedRoute>
+					}
+				/>
 				<Route />
 			</Routes>
 		</BrowserRouter>

@@ -3,9 +3,11 @@ import Button from "../button/Button";
 import Logo from "./../../assets/images/Netflix-logo.png";
 import "./navbar.css";
 import profile from "../../assets/images/profile.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { logout } from "../../api/movies";
 
 const Navbar = ({ isUser }) => {
+	const navigate = useNavigate();
 	return (
 		<div className="navbar">
 			<div className="logo-img">
@@ -37,6 +39,7 @@ const Navbar = ({ isUser }) => {
 						color="white"
 						bg="bg-1"
 						value="Log Out"
+						onclick={() => logout()}
 					/>
 				</div>
 			) : (
@@ -55,6 +58,7 @@ const Navbar = ({ isUser }) => {
 						color="white"
 						bg="bg-1"
 						value="Sign In"
+						onclick={() => navigate("signin")}
 					/>
 				</div>
 			)}
