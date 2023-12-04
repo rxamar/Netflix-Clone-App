@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./hero-banner.css";
-import HeroImg from "./../../assets/images/hero-banner.jpg";
+// import HeroImg from "./../../assets/images/hero-banner.jpg";
 import Navbar from "../navbar/Navbar";
 import Heading from "../heading/Heading";
 import Button from "../button/Button";

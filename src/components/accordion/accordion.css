@@ -43,14 +43,6 @@
 	color: white;
 	cursor: pointer;
 }
-.rotate {
-	transform: rotate(135deg);
-	transition: 0.3s ease;
-}
-.derotate {
-	transform: rotate(-90deg);
-	transition: 0.3s ease;
-}
 .accord-content {
 	opacity: 0;
 	height: 0;
@@ -64,4 +56,13 @@
 	height: auto;
 	padding: 10px 18px;
 	margin-top: 2px;
+}
+
+.rotate {
+	transform: rotate(135deg);
+	transition: 0.3s ease;
+}
+.derotate {
+	transform: rotate(-90deg);
+	transition: 0.3s ease;
 }
