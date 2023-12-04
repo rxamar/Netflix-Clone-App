@@ -7,18 +7,11 @@ import { Link, useNavigate } from "react-router-dom";
 import { logout } from "../../api/movies";
 
 const Navbar = ({ isUser }) => {
-<<<<<<< HEAD
+  const navigate = useNavigate();
   return (
     <div className="navbar">
       <div className="logo-img">
         <img src={Logo} alt="netflix logo" />
-=======
-	const navigate = useNavigate();
-	return (
-		<div className="navbar">
-			<div className="logo-img">
-				<img src={Logo} alt="netflix logo" />
->>>>>>> 3bba35774be8b8745f8910730878b46712ffc7ff
 
         {isUser && (
           <div className="nav">
@@ -36,6 +29,7 @@ const Navbar = ({ isUser }) => {
           </div>
         )}
       </div>
+
       {isUser ? (
         <div className="log-container">
           <img src={profile} alt="" width={30} height={30} />
@@ -45,6 +39,7 @@ const Navbar = ({ isUser }) => {
             color="white"
             bg="bg-1"
             value="Log Out"
+            onclick={() => logout()}
           />
         </div>
       ) : (
@@ -57,54 +52,18 @@ const Navbar = ({ isUser }) => {
             </select>
           </div>
 
-<<<<<<< HEAD
           <Button
             size="small"
             rounded="rounded"
             color="white"
             bg="bg-1"
             value="Sign In"
+            onclick={() => navigate("signin")}
           />
         </div>
       )}
     </div>
   );
-=======
-			{isUser ? (
-				<div className="log-container">
-					<img src={profile} alt="" width={30} height={30} />
-					<Button
-						size="medium"
-						rounded="rounded"
-						color="white"
-						bg="bg-1"
-						value="Log Out"
-						onclick={() => logout()}
-					/>
-				</div>
-			) : (
-				<div className="navbar-topright">
-					<div className="language-select">
-						<select name="language" id="language">
-							<option value="english">English</option>
-							<option value="hindi">हिंदी</option>
-							<option value="tamil">தமிழ்</option>
-						</select>
-					</div>
-
-					<Button
-						size="small"
-						rounded="rounded"
-						color="white"
-						bg="bg-1"
-						value="Sign In"
-						onclick={() => navigate("signin")}
-					/>
-				</div>
-			)}
-		</div>
-	);
->>>>>>> 3bba35774be8b8745f8910730878b46712ffc7ff
 };
 
 export default Navbar;
