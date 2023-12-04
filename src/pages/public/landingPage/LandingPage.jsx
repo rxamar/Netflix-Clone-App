@@ -44,7 +44,7 @@ const LandingPage = () => {
 							bg="bg-transparent"
 							label="Email Address"
 							value={email}
-							onchange={(event) => setEmail(event.target.value)}
+							onChange={(event) => setEmail(event.target.value)}
 						/>
 						<Button
 							size="large"
@@ -131,7 +131,7 @@ const LandingPage = () => {
 						bg="bg-transparent"
 						label="Email Address"
 						value={email}
-						onchange={(event) => setEmail(event.target.value)}
+						onChange={(event) => setEmail(event.target.value)}
 					/>
 					<Button
 						size="large"
