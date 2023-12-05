@@ -4,7 +4,6 @@ export const getFetchTrending = async () => {
 	try {
 		const { data } = await axios.get(requests.fetchTrending);
 		console.log(data);
-
 		return data;
 	} catch (error) {
 		alert(JSON.stringify(error));
@@ -146,4 +145,67 @@ export const getPageData = async () => {
 		scienceFictionMovies,
 		documentaries,
 	};
+};
+
+export const addToWishlist = async (media_id) => {
+	const options = {
+		method: "POST",
+		headers: {
+			accept: "application/json",
+			"content-type": "application/json",
+			Authorization: `Bearer ${process.env.REACT_APP_TOKEN}`,
+		},
+	};
+
+	const { data } = await axios.post(
+		`account/${process.env.REACT_APP_ACCOUNT_ID}/favorite`,
+		{
+			media_type: "movie",
+			media_id,
+			favorite: true,
+		},
+		options
+	);
+	return data;
+};
+
+export const getWishlist = async () => {
+	const options = {
+		headers: {
+			accept: "application/json",
+			Authorization: `Bearer ${process.env.REACT_APP_TOKEN}`,
+		},
+	};
+	const response = await axios.get(
+		`account/${process.env.REACT_APP_ACCOUNT_ID}/favorite/movies?language=en-US&page=1&sort_by=created_at.asc`,
+		options
+	);
+	return response.data;
+};
+
+// login
+
+const getOptions = {
+	headers: {
+		accept: "application/json",
+		Authorization: `Bearer ${process.env.REACT_APP_TOKEN}`,
+	},
+};
+export const login = async (body) => {
+	try {
+		const { data } = await axios.get("authentication/token/new", getOptions);
+		const { request_token } = data;
+		const { data: response } = await axios.post(
+			"authentication/token/validate_with_login",
+			{ ...body, request_token },
+			getOptions
+		);
+		// console.log(response?.success);
+		if (response?.success) {
+			localStorage.setItem("user", true);
+		}
+		return response?.success ?? false;
+	} catch (error) {
+		console.log({ error: error.message });
+	}
 };

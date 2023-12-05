@@ -28,11 +28,16 @@
 	display: flex;
 	gap: 10px;
 	padding-bottom: 40px;
+	justify-content: center;
 }
 
 @media screen and (max-width: 576px) {
 	.content-box {
 		flex-direction: column;
 		padding-bottom: 90px;
+	}
+
+	.main-title {
+		gap: 7px;
 	}
 }

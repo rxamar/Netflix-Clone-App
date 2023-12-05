@@ -1,19 +1,17 @@
 import React from "react";
+import "./row.css";
 import Card from "../card/Card";
 
-const List = ({ data }) => {
+const List = ({ title, data }) => {
 	return (
-		<ul
-			className=""
-			style={{
-				display: "grid",
-				gridTemplateColumns: "repeat(5,1fr)",
-			}}
-		>
-			{data?.map((item) => (
-				<Card movie={item} />
-			))}
-		</ul>
+		<div className="result-padding">
+			<h1 className="result-heading">{title}</h1>
+			<div className="wish-list-items">
+				{data?.map((item) => (
+					<Card movie={item} />
+				))}
+			</div>
+		</div>
 	);
 };
 

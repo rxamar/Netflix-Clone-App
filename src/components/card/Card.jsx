@@ -1,153 +1,40 @@
-// import React from "react";
 import "./card.css";
-// import Movie from "./../../assets/images/movie.jpg";
 import { FaPlayCircle } from "react-icons/fa";
-import { FaRegHeart } from "react-icons/fa";
+import { FaHeart } from "react-icons/fa";
+import { FaStar } from "react-icons/fa6";
 
-// const Card = () => {
-// 	return (
-// 		<>
-// 			<div className="rows">
-// 				<div className="single-card">
-// 					<div className="card-img">
-// 						<img src={Movie} alt="single movie card" className="test" />
-// 						<div className="card-content">
-// 							<div className="icons">
-// 								<FaPlayCircle className="play-icon" />
-// 								<FaRegHeart className="heart-icon" />
-// 							</div>
-// 							<h3 className="movie-title">
-// 								Movie Title Movie Title Movie Title
-// 							</h3>
-// 						</div>
-// 					</div>
-// 				</div>
-
-// 				<div className="single-card">
-// 					<div className="card-img">
-// 						<img src={Movie} alt="single movie card" />
-// 						<div className="card-content">
-// 							<div className="icons">
-// 								<FaPlayCircle className="play-icon" />
-// 								<FaRegHeart className="heart-icon" />
-// 							</div>
-// 							<h3 className="movie-title">
-// 								Movie Title Movie Title Movie Title
-// 							</h3>
-// 						</div>
-// 					</div>
-// 				</div>
-// 				<div className="single-card">
-// 					<div className="card-img">
-// 						<img src={Movie} alt="single movie card" className="test" />
-// 						<div className="card-content">
-// 							<div className="icons">
-// 								<FaPlayCircle className="play-icon" />
-// 								<FaRegHeart className="heart-icon" />
-// 							</div>
-// 							<h3 className="movie-title">
-// 								Movie Title Movie Title Movie Title
-// 							</h3>
-// 						</div>
-// 					</div>
-// 				</div>
-
-// 				<div className="single-card">
-// 					<div className="card-img">
-// 						<img src={Movie} alt="single movie card" />
-// 						<div className="card-content">
-// 							<div className="icons">
-// 								<FaPlayCircle className="play-icon" />
-// 								<FaRegHeart className="heart-icon" />
-// 							</div>
-// 							<h3 className="movie-title">
-// 								Movie Title Movie Title Movie Title
-// 							</h3>
-// 						</div>
-// 					</div>
-// 				</div>
-// 				<div className="single-card">
-// 					<div className="card-img">
-// 						<img src={Movie} alt="single movie card" className="test" />
-// 						<div className="card-content">
-// 							<div className="icons">
-// 								<FaPlayCircle className="play-icon" />
-// 								<FaRegHeart className="heart-icon" />
-// 							</div>
-// 							<h3 className="movie-title">
-// 								Movie Title Movie Title Movie Title
-// 							</h3>
-// 						</div>
-// 					</div>
-// 				</div>
-
-// 				<div className="single-card">
-// 					<div className="card-img">
-// 						<img src={Movie} alt="single movie card" />
-// 						<div className="card-content">
-// 							<div className="icons">
-// 								<FaPlayCircle className="play-icon" />
-// 								<FaRegHeart className="heart-icon" />
-// 							</div>
-// 							<h3 className="movie-title">
-// 								Movie Title Movie Title Movie Title
-// 							</h3>
-// 						</div>
-// 					</div>
-// 				</div>
-// 				<div className="single-card">
-// 					<div className="card-img">
-// 						<img src={Movie} alt="single movie card" className="test" />
-// 						<div className="card-content">
-// 							<div className="icons">
-// 								<FaPlayCircle className="play-icon" />
-// 								<FaRegHeart className="heart-icon" />
-// 							</div>
-// 							<h3 className="movie-title">
-// 								Movie Title Movie Title Movie Title
-// 							</h3>
-// 						</div>
-// 					</div>
-// 				</div>
-
-// 				<div className="single-card">
-// 					<div className="card-img">
-// 						<img src={Movie} alt="single movie card" />
-// 						<div className="card-content">
-// 							<div className="icons">
-// 								<FaPlayCircle className="play-icon" />
-// 								<FaRegHeart className="heart-icon" />
-// 							</div>
-// 							<h3 className="movie-title">
-// 								Movie Title Movie Title Movie Title
-// 							</h3>
-// 						</div>
-// 					</div>
-// 				</div>
-// 			</div>
-// 		</>
-// 	);
-// };
-
-// export default Card;
-
-import React from "react";
+import { addToWishlist } from "../../api/movies";
 const baseUrl = "https://image.tmdb.org/t/p/w500";
-const Card = ({ movie }) => {
+
+const Card = ({ movie, style, favMovies }) => {
+	// console.log(favMovies);
+	const isEqual = favMovies?.includes(movie?.id);
+	console.log(isEqual);
 	return (
-		<div className="single-card">
+		<div className={`single-card  ${style || ""} `}>
 			<div className="card-img">
 				<img
-					src={`${baseUrl}${movie.poster_path}`}
+					src={`${baseUrl}${movie.backdrop_path || movie.poster_path}`}
 					alt="single movie card"
 					className="test"
 				/>
 				<div className="card-content">
 					<div className="icons">
-						<FaPlayCircle className="play-icon" />
-						<FaRegHeart className="heart-icon" />
+						<div className="left-icons">
+							<FaPlayCircle className="play-icon" />
+							<FaHeart
+								onClick={() => addToWishlist(movie.id)}
+								fill={isEqual ? "red" : "white"}
+								className={`heart-icon `}
+							/>
+						</div>
+						<div className="rating">
+							<div className="rating-value">
+								<FaStar className="star-icon" />
+								{movie.vote_average.toFixed(1)} /10
+							</div>
+						</div>
 					</div>
-					console.log(movie);
 					<h3 className="movie-title">{movie.title || movie.name}</h3>
 				</div>
 			</div>
