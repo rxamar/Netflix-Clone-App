@@ -1,10 +1,10 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import SigninPage from "../pages/auth/signIn/SignIn";
-import SignupPage from "../pages/auth/signUp/SignUp";
+import SigninPage from "../pages/auth/signIn/page";
+import SignupPage from "../pages/auth/signUp/page";
 import HomePage from "../pages/portal/home/page";
-import SearchPage from "../pages/portal/search/Page";
-import MyListPage from "../pages/portal/myList/Page";
-import LandingPage from "../pages/public/landingPage/LandingPage";
+import SearchPage from "../pages/portal/search/page";
+import MyListPage from "../pages/portal/myList/page";
+import LandingPage from "../pages/public/landingPage/page";
 import {
 	ProtectedRoute,
 	ProtectedRouteForUnAuthorizedPage,

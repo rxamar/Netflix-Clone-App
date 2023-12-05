@@ -1,13 +1,18 @@
 import React from "react";
 import Button from "../button/Button";
 import Logo from "./../../assets/images/Netflix-logo.png";
-import "./navbar.css";
 import profile from "../../assets/images/profile.png";
 import { Link, useNavigate } from "react-router-dom";
-import { logout } from "../../api/movies";
+import "./navbar.css";
 
 const Navbar = ({ isUser }) => {
+	const logout = () => {
+		localStorage.removeItem("user");
+		logoutNav("/");
+	};
+
 	const navigate = useNavigate();
+	const logoutNav = useNavigate();
 	return (
 		<div className="navbar">
 			<div className="logo-img">

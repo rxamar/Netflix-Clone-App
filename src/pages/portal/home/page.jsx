@@ -9,7 +9,6 @@ const HomePage = () => {
 	useEffect(() => {
 		getPageData().then((res) => setData(res));
 	}, []);
-	console.log(data);
 	return (
 		<main>
 			<HeroBanner />

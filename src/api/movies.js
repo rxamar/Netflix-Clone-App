@@ -1,11 +1,9 @@
-import { Navigate } from "react-router-dom";
 import axios from "../libs/axios";
 import requests from "../libs/request";
 export const getFetchTrending = async () => {
 	try {
 		const { data } = await axios.get(requests.fetchTrending);
 		console.log(data);
-
 		return data;
 	} catch (error) {
 		alert(JSON.stringify(error));
@@ -210,8 +208,4 @@ export const login = async (body) => {
 	} catch (error) {
 		console.log({ error: error.message });
 	}
-};
-
-export const logout = () => {
-	localStorage.removeItem("user");
 };

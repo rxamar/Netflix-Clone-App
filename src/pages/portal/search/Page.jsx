@@ -61,7 +61,7 @@ const Page = () => {
 							bg="search"
 							placeholder="Search Movies"
 							value={search}
-							onchange={handleChange}
+							onChange={handleChange}
 						/>
 					</div>
 					<Button
