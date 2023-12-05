@@ -2,27 +2,30 @@ import { useEffect, useState } from "react";
 import Row from "../../../components/row/Row";
 import "./home.css";
 import { getPageData } from "../../../api/movies";
+import HeroBanner from "../../../components/hero-banner/HeroBanner";
+// import Footer from "../../../components/footer/Footer";
 const HomePage = () => {
 	const [data, setData] = useState(null);
 	useEffect(() => {
 		getPageData().then((res) => setData(res));
 	}, []);
-	console.log(data);
 	return (
 		<main>
+			<HeroBanner />
 			<Row title="NETFLIX ORIGINALS" data={data?.netflixOriginals.results} />
-			<Row title="trending now" data={data?.trendingNow.results} />
-			<Row title="topRated" data={data?.topRated.results} />
-			<Row title="actionMovies" data={data?.actionMovies.results} />
-			<Row title="comedyMoives" data={data?.comedyMoives.results} />
-			<Row title="horrorMovies" data={data?.horrorMovies.results} />
-			<Row title="romanceMovies" data={data?.romanceMovies.results} />
-			<Row title="warMovies" data={data?.warMovies.results} />
+			<Row title="TRENDING NOW" data={data?.trendingNow.results} />
+			<Row title="TOP RATED" data={data?.topRated.results} />
+			<Row title="ACTION MOVIES" data={data?.actionMovies.results} />
+			<Row title="COMEDY MOVIES" data={data?.comedyMoives.results} />
+			<Row title="HORROR MOVIES" data={data?.horrorMovies.results} />
+			<Row title="ROMANCE MOVIES" data={data?.romanceMovies.results} />
+			<Row title="WAR MOVIES" data={data?.warMovies.results} />
 			<Row
-				title="scienceFictionMovies"
+				title="SCIENCE FICTION MOIVE"
 				data={data?.scienceFictionMovies.results}
 			/>
-			<Row title="documentaries" data={data?.documentaries.results} />
+			<Row title="DOCUMENTARIES" data={data?.documentaries.results} />
+			{/* <Footer /> */}
 		</main>
 	);
 };
