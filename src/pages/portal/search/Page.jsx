@@ -94,4 +94,6 @@ const Page = () => {
 	);
 };
 
+// search page end
+
 export default Page;
