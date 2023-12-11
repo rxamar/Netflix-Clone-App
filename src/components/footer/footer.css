@@ -7,6 +7,7 @@
 	height: 70vh;
 	width: 100%;
 	padding: 20px 23px;
+	background-color: rgba(0, 0, 0, 0.507);
 }
 .footer-content {
 	display: grid;
