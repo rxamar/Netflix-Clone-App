@@ -21,7 +21,7 @@ const Form = ({ isSignUp }) => {
 		event.preventDefault();
 		// Perform form submission logic here
 		console.log("Form submitted:", user);
-		login(user);
+		// login(user);
 		const response = await login(user);
 		console.log({ response });
 		if (response) {

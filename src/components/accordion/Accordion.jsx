@@ -8,7 +8,7 @@ export const Accordion = ({ faq, index, show, toggleAccordion }) => {
 			<div className="accord-container" onClick={() => toggleAccordion(index)}>
 				<h3 className="accordian-question">{faq.question}</h3>
 				<div>
-					<PlusIcon className={`down-icon ${show ? "rot ate" : "derotate"}`} />
+					<PlusIcon className={`down-icon ${show ? "rotate" : "derotate"}`} />
 				</div>
 			</div>
 			<ul className={`accord-content ${show ? "accord-show" : ""}`}>
